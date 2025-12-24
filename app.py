@@ -12,7 +12,7 @@ WRONG_TEXT = "Wrong password."
 
 
 def parse_numbers(raw: str):
-    raw = (raw or "").strip().replace(",", " ")
+    raw = (raw or "").strip().replace(",", "")
     parts = [p for p in raw.split() if p]
 
     if len(parts) != len(SECRET_CODE):
