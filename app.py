@@ -164,6 +164,6 @@ if submitted:
         else:
             speak_js(WRONG_TEXT)
 
-        time.sleep(1.2)
+        # Do NOT rerun immediately — let audio finish
         st.session_state.screen = "normal"
-        st.rerun()
+
