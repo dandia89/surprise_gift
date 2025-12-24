@@ -7,7 +7,7 @@ import streamlit.components.v1 as components
 st.set_page_config(page_title="Password Chest", page_icon="🗝️", layout="centered")
 
 SECRET_CODE = [2,7,1,9]
-WIN_TEXT = "Congratulations to Amelia and Ashton. You win a vacation home to Spruce Grove."
+WIN_TEXT = "Congratulations to Amelia and Ashton. You win a hotel stay in Stoney Plain"
 WRONG_TEXT = "Wrong password."
 
 
