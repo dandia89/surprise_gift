@@ -12,19 +12,19 @@ WRONG_TEXT = "Wrong password."
 
 
 def parse_numbers(raw: str):
-    raw = (raw or "").strip().replace(",", "")
-    parts = [p for p in raw.split() if p]
+    raw = (raw or "").strip()
 
-    if len(parts) != len(SECRET_CODE):
+    # Remove common separators
+    raw = raw.replace(" ", "").replace(",", "")
+
+    if not raw.isdigit():
+        raise ValueError("Only whole numbers allowed.")
+
+    if len(raw) != len(SECRET_CODE):
         raise ValueError(f"Enter exactly {len(SECRET_CODE)} numbers.")
 
-    nums = []
-    for p in parts:
-        if not p.lstrip("-").isdigit():
-            raise ValueError("Only whole numbers allowed.")
-        nums.append(int(p))
+    return [int(ch) for ch in raw]
 
-    return nums
 
 
 def set_fullscreen_bg(mode: str):
