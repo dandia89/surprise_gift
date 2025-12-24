@@ -6,7 +6,7 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Password Chest", page_icon="🗝️", layout="centered")
 
-SECRET_CODE = [2, 7, 1, 9]
+SECRET_CODE = [2,7,1,9]
 WIN_TEXT = "Congratulations! You win a vacation home to Spruce Grove."
 WRONG_TEXT = "Wrong password."
 
@@ -111,7 +111,7 @@ wrong_audio = st.file_uploader(
 with st.form("unlock_form"):
     code_str = st.text_input(
         f"Enter the code ({len(SECRET_CODE)} numbers):",
-        placeholder="2 7 1 9"
+        placeholder="0000"
     )
     submitted = st.form_submit_button("Unlock")
 
